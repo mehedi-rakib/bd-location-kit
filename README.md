@@ -6,6 +6,8 @@ Complete Bangladesh location data for npm - Divisions, Districts, and Areas with
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/node.js-%3E%3D12.0.0-brightgreen)](https://nodejs.org/)
 
+**npm Package:** [https://www.npmjs.com/package/bd-location-kit](https://www.npmjs.com/package/bd-location-kit)
+
 ---
 
 ## Features
@@ -38,49 +40,56 @@ yarn add bd-location-kit
 
 ## Quick Start
 
-### Get All Divisions
+### Get Districts by Division
 
 ```javascript
-const { getDivisions } = require('bd-location-kit');
+const { getDistrictsByDivision } = require('bd-location-kit');
 
-const divisions = getDivisions();
-console.log(divisions);
-/* Output:
-[
-  { id: 1, name: 'Barishal', bn_name: 'বরিশাল', status: 1 },
-  { id: 2, name: 'Chattogram', bn_name: 'চট্টগ্রাম', status: 1 },
-  ...
-]
-*/
-```
-
-### Get All Districts
-
-```javascript
-const { getDistricts } = require('bd-location-kit');
-
-const districts = getDistricts();
-console.log(districts);
+// Get all districts in Chattogram division (division_id: 1)
+const chattogramDistricts = getDistrictsByDivision(1);
+console.log(chattogramDistricts);
 /* Output:
 [
   { id: 1, name: 'Comilla', bn_name: 'কুমিল্লা', division_id: 1, status: 1 },
   { id: 2, name: 'Feni', bn_name: 'ফেনী', division_id: 1, status: 1 },
+  { id: 3, name: 'Brahmanbaria', bn_name: 'ব্রাহ্মণবাড়িয়া', division_id: 1, status: 1 },
   ...
 ]
 */
 ```
 
-### Get All Areas
+### Get Areas by District (Feni Example)
 
 ```javascript
-const { getAreas } = require('bd-location-kit');
+const { getAreasByDistrict } = require('bd-location-kit');
 
-const areas = getAreas();
-console.log(areas);
+// Get all areas in Feni district (district_id: 2)
+const feniAreas = getAreasByDistrict(2);
+console.log(feniAreas);
 /* Output:
 [
-  { id: 1, name: 'Debidwar', bn_name: 'দেবিদ্বার', district_id: 1 },
-  { id: 2, name: 'Barura', bn_name: 'বরুড়া', district_id: 1 },
+  { id: 18, name: 'Chhagalnaiya', bn_name: 'ছাগলনাইয়া', district_id: 2, status: 1 },
+  { id: 19, name: 'Feni Sadar', bn_name: 'ফেনী সদর', district_id: 2, status: 1 },
+  { id: 20, name: 'Sonagazi', bn_name: 'সোনাগাজী', district_id: 2, status: 1 },
+  { id: 21, name: 'Fulgazi', bn_name: 'ফুলগাজী', district_id: 2, status: 1 },
+  { id: 22, name: 'Parshuram', bn_name: 'পরশুরাম', district_id: 2, status: 1 },
+]
+*/
+```
+
+### Get Areas by District (Comilla Example)
+
+```javascript
+const { getAreasByDistrict } = require('bd-location-kit');
+
+// Get all areas in Comilla district (district_id: 1)
+const comilaAreas = getAreasByDistrict(1);
+console.log(comilaAreas);
+/* Output:
+[
+  { id: 1, name: 'Debidwar', bn_name: 'দেবিদ্বার', district_id: 1, status: 1 },
+  { id: 2, name: 'Barura', bn_name: 'বরুড়া', district_id: 1, status: 1 },
+  { id: 3, name: 'Laksham', bn_name: 'লাকসাম', district_id: 1, status: 1 },
   ...
 ]
 */

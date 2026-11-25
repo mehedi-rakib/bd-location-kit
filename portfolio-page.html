@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD Location Kit - Open Source Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .hero {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .badge.npm {
+            background: #cb3837;
+            color: white;
+        }
+
+        .badge.github {
+            background: #333;
+            color: white;
+        }
+
+        .badge.ts {
+            background: #3178c6;
+            color: white;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f8f8;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .installation {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .installation h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .code-block {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .example {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .example h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .links {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .links h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .link-card {
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 5px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .link-card:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .link-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .link-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .link-card .url {
+            color: #667eea;
+            font-size: 12px;
+            word-break: break-all;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        footer p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">BD Location Kit</div>
+                <p class="tagline">Complete Bangladesh geographic data library</p>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>BD Location Kit</h1>
+            <p>A production-ready npm package providing complete Bangladesh geographic data with bilingual support (English & Bengali). Zero dependencies, fully tested, and ready for enterprise use.</p>
+
+            <div class="badges">
+                <span class="badge npm">npm Published</span>
+                <span class="badge github">Open Source</span>
+                <span class="badge ts">TypeScript</span>
+                <span class="badge">Zero Dependencies</span>
+                <span class="badge">39/39 Tests</span>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://www.npmjs.com/package/bd-location-kit" class="btn btn-primary">View on npm</a>
+                <a href="https://github.com/mehedi-rakib/bd-location-kit" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">🗺️</div>
+                <h3>Complete Data</h3>
+                <p>8 divisions, 65 districts, 1,621 areas with bilingual names</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌐</div>
+                <h3>Bilingual Support</h3>
+                <p>Full English and Bengali language support for all locations</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📦</div>
+                <h3>Zero Dependencies</h3>
+                <p>No external dependencies - lightweight and secure</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Performance</h3>
+                <p>Zero-latency local data access without API calls</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔐</div>
+                <h3>Production Ready</h3>
+                <p>Fully tested with 39 unit tests and security hardened</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>TypeScript</h3>
+                <p>Full TypeScript support with complete type definitions</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <div class="stat-number">1,694</div>
+                <div class="stat-label">Locations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">39</div>
+                <div class="stat-label">Tests Passing</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Dependencies</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Bilingual</div>
+            </div>
+        </section>
+
+        <section class="installation">
+            <h2>Installation</h2>
+            <div class="code-block">npm install bd-location-kit</div>
+        </section>
+
+        <section class="example">
+            <h2>Quick Example</h2>
+            <div class="code-block">
+const { getAreasByDistrict } = require('bd-location-kit');
+
+// Get all areas in Feni district
+const feniAreas = getAreasByDistrict(2);
+
+console.log(feniAreas);
+/* Output:
+[
+  { id: 18, name: 'Chhagalnaiya', bn_name: 'ছাগলনাইয়া', district_id: 2 },
+  { id: 19, name: 'Feni Sadar', bn_name: 'ফেনী সদর', district_id: 2 },
+  { id: 20, name: 'Sonagazi', bn_name: 'সোনাগাজী', district_id: 2 },
+  ...
+]
+*/</div>
+        </section>
+
+        <section class="links">
+            <h2>Important Links</h2>
+            <div class="link-grid">
+                <a href="https://www.npmjs.com/package/bd-location-kit" class="link-card">
+                    <h3>npm Package</h3>
+                    <p>Install and manage the package on npm registry</p>
+                    <span class="url">npmjs.com/package/bd-location-kit</span>
+                </a>
+                <a href="https://github.com/mehedi-rakib/bd-location-kit" class="link-card">
+                    <h3>GitHub Repository</h3>
+                    <p>Source code, issues, and contributions</p>
+                    <span class="url">github.com/mehedi-rakib/bd-location-kit</span>
+                </a>
+                <a href="https://github.com/mehedi-rakib/bd-location-kit/blob/main/README.md" class="link-card">
+                    <h3>Documentation</h3>
+                    <p>Complete API documentation and examples</p>
+                    <span class="url">README.md</span>
+                </a>
+                <a href="https://github.com/mehedi-rakib/bd-location-kit/blob/main/SECURITY.md" class="link-card">
+                    <h3>Security Policy</h3>
+                    <p>Security guidelines and vulnerability reporting</p>
+                    <span class="url">SECURITY.md</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p><strong>BD Location Kit v1.0.0</strong></p>
+            <p>Built by <a href="https://www.mehedirakib.com">Mehedi Hasan Rakib</a></p>
+            <p>Licensed under <a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+            <p style="margin-top: 15px; font-size: 12px; color: #999;">
+                Complete Bangladesh geographic data for npm | Zero dependencies | Bilingual support
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
