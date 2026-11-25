@@ -1,0 +1,17 @@
+docs/
+tests/
+scripts/
+resources/
+.claude/
+.git/
+.gitignore
+*.test.js
+*.md
+!README.md
+!LICENSE
+.DS_Store
+*.log
+node_modules/
+.env
+.env.local
+.npmrc

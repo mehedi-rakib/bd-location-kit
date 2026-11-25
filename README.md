@@ -1,6 +1,6 @@
-# 🇧🇩 BD Location Kit
+# BD Location Kit
 
-> Complete Bangladesh location data for npm - Divisions, Districts, and Areas with bilingual support
+Complete Bangladesh location data for npm - Divisions, Districts, and Areas with bilingual support
 
 [![npm version](https://img.shields.io/npm/v/bd-location-kit.svg)](https://www.npmjs.com/package/bd-location-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,21 +8,21 @@
 
 ---
 
-## ✨ Features
+## Features
 
-- 🗺️ **Complete Bangladesh Geographic Data** - 8 divisions, 64+ districts, 4,100+ areas
-- 🌐 **Bilingual Support** - English and Bengali names for all locations
-- 📦 **Zero Dependencies** - Lightweight package with no external dependencies
-- ⚡ **Easy Integration** - Simple getter functions for quick access
-- 🔍 **Flexible Filtering** - Filter by division, district, status, and more
-- 🔄 **Multiple Formats** - JSON, SQL, CSV support
-- 📱 **Perfect for Forms** - Ready for address selectors and location dropdowns
-- 💾 **Database Ready** - SQL format for direct database imports
-- 🏃 **Fast** - Zero-latency data access (no API calls needed)
+- **Complete Bangladesh Geographic Data** - 8 divisions, 64+ districts, 4,100+ areas
+- **Bilingual Support** - English and Bengali names for all locations
+- **Zero Dependencies** - Lightweight package with no external dependencies
+- **Easy Integration** - Simple getter functions for quick access
+- **Flexible Filtering** - Filter by division, district, status, and more
+- **Multiple Formats** - JSON, SQL, CSV support
+- **Perfect for Forms** - Ready for address selectors and location dropdowns
+- **Database Ready** - SQL format for direct database imports
+- **Fast** - Zero-latency data access (no API calls needed)
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install bd-location-kit
@@ -36,7 +36,7 @@ yarn add bd-location-kit
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Get All Divisions
 
@@ -88,7 +88,7 @@ console.log(areas);
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 ### Functions
 
@@ -221,7 +221,7 @@ const csvData = kit.exportAsCSV('areas');
 
 ---
 
-## 🎯 Real-World Examples
+## Real-World Examples
 
 ### 1. Address Form with Express.js
 
@@ -364,7 +364,7 @@ seedLocationData();
 
 ---
 
-## 📊 Data Structure
+## Data Structure
 
 ### Division Object
 ```javascript
@@ -404,7 +404,7 @@ seedLocationData();
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 bd-location-kit/
@@ -430,7 +430,7 @@ bd-location-kit/
 
 ---
 
-## 🔍 Search Functionality
+## Search Functionality
 
 The package supports case-insensitive search for all data types:
 
@@ -447,7 +447,7 @@ const results = getAreas({ search: 'debid' });
 
 ---
 
-## 🌐 Browser Usage
+## Browser Usage
 
 You can also use this package in browsers via bundlers like Webpack or Parcel:
 
@@ -459,7 +459,7 @@ const divisions = getDivisions();
 
 ---
 
-## 📋 Statistics
+## Statistics
 
 - **Divisions**: 8
 - **Districts**: 64+
@@ -469,7 +469,7 @@ const divisions = getDivisions();
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Setup
 
@@ -498,11 +498,11 @@ npm run lint      # Lint code with ESLint
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how you can help:
 
-1. **Report Issues** - Found a bug? [Open an issue](https://github.com/yourusername/bd-location-kit/issues)
+1. **Report Issues** - Found a bug? [Open an issue](https://github.com/mehedi-rakib/bd-location-kit/issues)
 2. **Submit PRs** - Have improvements? Fork and submit a pull request
 3. **Improve Docs** - Help us improve documentation
 4. **Add Features** - Suggest new features via issues
@@ -516,7 +516,7 @@ We welcome contributions! Here's how you can help:
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -536,15 +536,15 @@ copies or substantial portions of the Software.
 
 ---
 
-## 📞 Support
+## Support
 
-- 📧 **Email**: support@example.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/bd-location-kit/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/bd-location-kit/discussions)
+- **Email**: mehedirakib.dev@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/mehedi-rakib/bd-location-kit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/mehedi-rakib/bd-location-kit/discussions)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Data sourced from official Bangladesh government sources
 - Inspired by similar location packages in other countries
@@ -552,7 +552,7 @@ copies or substantial portions of the Software.
 
 ---
 
-## 📈 Roadmap
+## Roadmap
 
 - [ ] v1.0.0 - Initial release with core functionality
 - [ ] v1.1.0 - Add advanced filtering and search
@@ -562,31 +562,32 @@ copies or substantial portions of the Software.
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
-✅ E-commerce platforms (delivery address forms)  
-✅ Logistics and shipping applications  
-✅ Government and administrative systems  
-✅ Real estate and property platforms  
-✅ Healthcare and clinic locators  
-✅ Educational institution finders  
-✅ Banking and financial services  
-✅ Tourism and travel applications  
-✅ Data analysis and business intelligence  
-✅ Any application requiring Bangladesh location data  
-
----
-
-**Made with ❤️ for Bangladesh developers**
+- E-commerce platforms (delivery address forms)
+- Logistics and shipping applications
+- Government and administrative systems
+- Real estate and property platforms
+- Healthcare and clinic locators
+- Educational institution finders
+- Banking and financial services
+- Tourism and travel applications
+- Data analysis and business intelligence
+- Any application requiring Bangladesh location data
 
 ---
 
 ## Quick Links
 
 - [Documentation](./docs/plan.md)
-- [GitHub Repository](https://github.com/yourusername/bd-location-kit)
+- [Changelog](./CHANGELOG.md)
+- [Contributing](./CONTRIBUTING.md)
+- [Security Policy](./SECURITY.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [GitHub Repository](https://github.com/mehedi-rakib/bd-location-kit)
 - [npm Package](https://www.npmjs.com/package/bd-location-kit)
-- [Issues](https://github.com/yourusername/bd-location-kit/issues)
+- [Issues](https://github.com/mehedi-rakib/bd-location-kit/issues)
+- [Discussions](https://github.com/mehedi-rakib/bd-location-kit/discussions)
 
 ---
 

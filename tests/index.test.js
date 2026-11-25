@@ -40,7 +40,7 @@ function assert(condition, message) {
   }
 }
 
-console.log(`\n${colors.blue}🧪 BD Location Kit - Test Suite${colors.reset}\n`);
+console.log(`\n${colors.blue}BD Location Kit - Test Suite${colors.reset}\n`);
 
 // Test 1: Get all divisions
 console.log(`${colors.yellow}Test 1: Get Divisions${colors.reset}`);

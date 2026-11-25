@@ -108,11 +108,8 @@ function extractInsertData(sql, tableName) {
   return data;
 }
 
-console.log('🔨 Building bd-location-kit...\n');
-
 try {
   // Extract divisions
-  console.log('📍 Extracting divisions...');
   const divisions = extractInsertData(sqlContent, 'divisions');
   const divisionsJson = {
     total: divisions.length,
@@ -122,10 +119,8 @@ try {
     path.join(dataDir, 'divisions.json'),
     JSON.stringify(divisionsJson, null, 2)
   );
-  console.log(`   ✅ Found ${divisions.length} divisions`);
 
   // Extract districts
-  console.log('📍 Extracting districts...');
   const districts = extractInsertData(sqlContent, 'districts');
   const districtsJson = {
     total: districts.length,
@@ -135,10 +130,8 @@ try {
     path.join(dataDir, 'districts.json'),
     JSON.stringify(districtsJson, null, 2)
   );
-  console.log(`   ✅ Found ${districts.length} districts`);
 
   // Extract areas
-  console.log('📍 Extracting areas...');
   const areas = extractInsertData(sqlContent, 'areas');
   const areasJson = {
     total: areas.length,
@@ -148,10 +141,8 @@ try {
     path.join(dataDir, 'areas.json'),
     JSON.stringify(areasJson, null, 2)
   );
-  console.log(`   ✅ Found ${areas.length} areas`);
 
   // Create combined file
-  console.log('📍 Creating combined data file...');
   const combined = {
     metadata: {
       buildDate: new Date().toISOString(),
@@ -171,14 +162,7 @@ try {
     path.join(dataDir, 'all.json'),
     JSON.stringify(combined, null, 2)
   );
-
-  console.log('\n✨ Build completed successfully!\n');
-  console.log('📊 Summary:');
-  console.log(`   • Divisions: ${divisions.length}`);
-  console.log(`   • Districts: ${districts.length}`);
-  console.log(`   • Areas: ${areas.length}`);
-  console.log(`   • Total locations: ${divisions.length + districts.length + areas.length}\n`);
 } catch (error) {
-  console.error('❌ Build failed:', error.message);
+  console.error('Build failed:', error.message);
   process.exit(1);
 }

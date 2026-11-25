@@ -8,8 +8,9 @@
     "test": "node tests/index.test.js",
     "build": "node scripts/build.js",
     "prepare": "npm run build",
-    "lint": "echo 'Linting...'",
-    "format": "echo 'Formatting...'"
+    "prepublishOnly": "npm test",
+    "lint": "echo '✅ Linting disabled (consider adding eslint)'",
+    "format": "echo '✅ Formatting disabled (consider adding prettier)'"
   },
   "keywords": [
     "bangladesh",
