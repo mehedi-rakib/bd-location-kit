@@ -541,6 +541,7 @@ copies or substantial portions of the Software.
 - **Email**: mehedirakib.dev@gmail.com
 - **Issues**: [GitHub Issues](https://github.com/mehedi-rakib/bd-location-kit/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/mehedi-rakib/bd-location-kit/discussions)
+- **Security**: [Report Security Issues](./SECURITY.md)
 
 ---
 
