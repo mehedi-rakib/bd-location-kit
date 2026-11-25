@@ -1,0 +1,109 @@
+{
+  "total": 8,
+  "divisions": [
+    {
+      "id": 1,
+      "country_id": null,
+      "division_name": "Chattagram",
+      "bn_name": "চট্টগ্রাম",
+      "url": "www.chittagongdiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 2,
+      "country_id": null,
+      "division_name": "Rajshahi",
+      "bn_name": "রাজশাহী",
+      "url": "www.rajshahidiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 3,
+      "country_id": null,
+      "division_name": "Khulna",
+      "bn_name": "খুলনা",
+      "url": "www.khulnadiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 4,
+      "country_id": null,
+      "division_name": "Barisal",
+      "bn_name": "বরিশাল",
+      "url": "www.barisaldiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 5,
+      "country_id": null,
+      "division_name": "Sylhet",
+      "bn_name": "সিলেট",
+      "url": "www.sylhetdiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 6,
+      "country_id": null,
+      "division_name": "Dhaka",
+      "bn_name": "ঢাকা",
+      "url": "www.dhakadiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 7,
+      "country_id": null,
+      "division_name": "Rangpur",
+      "bn_name": "রংপুর",
+      "url": "www.rangpurdiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    },
+    {
+      "id": 8,
+      "country_id": null,
+      "division_name": "Mymensingh",
+      "bn_name": "ময়মনসিংহ",
+      "url": "www.mymensinghdiv.gov.bd",
+      "status": 1,
+      "updated_by": null,
+      "created_by": null,
+      "created_at": null,
+      "updated_at": null,
+      "deleted_at": null
+    }
+  ]
+}
